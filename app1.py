@@ -172,5 +172,11 @@ def predict():
           print(f"Error: {str(e)}")
           return '', 500
 
+@app.route('/')
+def home():
+    return 'Welcome to the Flask App!', 200
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000, debug=True)
+
